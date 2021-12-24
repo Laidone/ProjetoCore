@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace ProjetoCore.API.Models
+namespace Dominio
 {
     public class ErrorViewModel
     {

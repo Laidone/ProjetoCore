@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProjetoCore.API.Models
+namespace Dominio
 {
     public class Movie
     {
@@ -33,19 +37,6 @@ namespace ProjetoCore.API.Models
 
         [Display(Name = "Upload image")]
         public byte[] ImageFile { get; set; }
-        /*public string ImageMimeType { get; set; }
-        [Display(Name = "Image link ")]
-        [DataType(DataType.ImageUrl)]
-        public String ImageUrl { get; set; }*/
 
-        //public int ID { get; set; }
-        //public string Title { get; set; }
-        //public string Director { get; set; }
-        //public DateTime ReleaseDate { get; set; }
-        //public decimal Gross { get; set; }
-        //public double Rating { get; set; }
-
-        //public int GenreID { get; set; }
-        //public virtual Genre Genre { get; set; }
     }
 }

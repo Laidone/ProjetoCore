@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using ProjetoCore.API.Data;
+using Infra;
 
 namespace ProjetoCore.API
 {

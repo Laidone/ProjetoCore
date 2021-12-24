@@ -1,7 +1,11 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProjetoCore.API.Migrations
+namespace Infra.Migrations
 {
     public partial class InitialCreate : Migration
     {

@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ProjetoCore.API.Data;
-using ProjetoCore.API.Models;
 using ProjetoCore.API.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Infra;
+using Dominio;
 
 namespace ProjetoCore.API.Controllers
 {
@@ -60,49 +60,6 @@ namespace ProjetoCore.API.Controllers
             }
             return View(movies);
         }
-        // GET: Movie/Create
-        //[Authorize]
-        /*public ActionResult Create()
-        {
-            ViewBag.GenreID = new SelectList(movieDb.Genre, "GenreID", "Name");
-            return View();
-        }
-
-        // POST: Movie/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        //[Authorize]
-        //[DateActionFilter]
-        public ActionResult Create([Bind("ID,Title,Director,ReleaseDate,Gross,Rating, GenreID")] Movie movie, IFormFile Image)
-        {
-            if (ModelState.IsValid)
-            {
-                using (var ms = new MemoryStream())
-                {
-                    Image.CopyTo(ms);
-                    movie.ImageFile = ms.ToArray();
-                }
-
-                movieDb.Add(movie);
-                movieDb.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-
-            ViewBag.GenreID = new SelectList(movieDb.Genre, "GenreID", "Name", movie.GenreID);
-            return View(movie);
-        }/*
-            /*public ActionResult Create([Bind("ID,Title,Director,ReleaseDate,Gross,Rating, GenreID")] Movie movie)
-            {
-                if (ModelState.IsValid)
-                {
-                    movieDb.Movie.Add(movie);
-                    movieDb.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-
-                ViewBag.GenreID = new SelectList(movieDb.Genre, "GenreID", "Name", movie.GenreID);
-                return View(movie);
-            }*/
         public ActionResult Details(int? id)
         {
             if (id == null)

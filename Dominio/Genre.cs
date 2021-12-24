@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProjetoCore.API.Models
+namespace Dominio
 {
     public class Genre
     {
@@ -14,11 +18,5 @@ namespace ProjetoCore.API.Models
         public string Description { get; set; }
 
         public virtual ICollection<Movie> Movies { get; set; }
-
-        //public int GenreID { get; set; }
-        //public string Name { get; set; }
-        //public string Description { get; set; }
-
-        //public virtual ICollection<Movie> Movies { get; set; }
     }
 }

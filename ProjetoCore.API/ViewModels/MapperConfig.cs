@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using ProjetoCore.API.Models;
+using Dominio;
 
 namespace ProjetoCore.API.ViewModels
 {

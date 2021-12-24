@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using ProjetoCore.API.Models;
+﻿using Dominio;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
